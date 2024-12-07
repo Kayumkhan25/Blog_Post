@@ -1,1 +1,1 @@
-<h3><a href="https://blog-post-dun-seven.vercel.app/">Live Demo:</a></h3> 
+<h3><a href="https://blog-post-dun-seven.vercel.app/">Live Demo</a></h3> 

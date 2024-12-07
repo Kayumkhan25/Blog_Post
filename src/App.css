@@ -1,27 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.loader {
-    width: 45px;
-    height: 30px;
-    animation: l1 2s infinite linear;
+.spinner {
+    width: 44.8px;
+    height: 44.8px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
 }
 
-@keyframes l1 {
-    0%,
-    25% {
-        background: linear-gradient(#e90528 0 0) 50% 0/66% 100% no-repeat
+.spinner>div {
+    background-color: rgba(40, 49, 223, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2.2px solid #2831df;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22.4px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22.4px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
     }
-    25.1%,
     50% {
-        background: linear-gradient(#004ce4 0 0) 0 0/100% 50% no-repeat, linear-gradient(#004ce4 0 0) 0 0/33% 100% no-repeat
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
     }
-    50.1%,
-    75% {
-        background: linear-gradient(#00e622 0 0) 100% 0/66% 50% no-repeat, linear-gradient(#00e622 0 0) 0 100%/66% 50% no-repeat
-    }
-    75.1%,
     100% {
-        background: linear-gradient(#9d0be6 0 0) 0 100%/100% 50% no-repeat, linear-gradient(#9d0be6 0 0) 50% 0 /33% 50% no-repeat
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
     }
 }

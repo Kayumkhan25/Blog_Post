@@ -9,7 +9,7 @@ export default function Blogs() {
   // Handle loading state
   if (loading) {
     return (
-      <div className="max-w-[950px] mr-40 items-center justify-center mt-24">
+      <div className="max-w-[950px] min-h-screen flex justify-center mx-auto items-center">
         <Loading />
       </div>
     );  
